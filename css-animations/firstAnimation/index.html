@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 400px;
+            height: 400px;
+            margin: 80px auto;
+            background-color: #050210;
+        }
+
+        #cercle {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            border: 1px;
+            border-radius: 100%;
+            box-sizing:border-box;
+            margin: 75px 75px;
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+            animation: rotate 0.5s linear 0s infinite normal forwards;
+        }
+
+        #shadow {
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            border: 1px;
+            border-radius: 100%;
+            box-sizing:border-box;
+            margin: 70px 70px;
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+            filter: blur(30px);
+            z-index: 0;
+            animation: rotate 0.5s linear 0s infinite normal forwards;
+        }
+
+        #waves-box {
+            width: 220px;
+            height: 220px;
+            border-radius: 100% ;
+            background-color:#050210 ;
+            position: absolute;
+            margin:90px 90px ;
+        }
+
+        #waves {
+            width: 4px;
+            height: 4px;
+            border-radius: 100% ;
+            background-color:#050210 ;
+            position: absolute;
+            margin:198px 198px ;
+            filter: brightness(2);
+            animation: waves 1.5s linear 0s infinite normal;
+        }
+
+
+        @keyframes rotate {
+            from {
+               transform: rotate(0deg);
+            }
+            to {
+               transform: rotate(180deg);
+            }
+        }
+
+
+        @keyframes waves {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(55);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box">
+        <div id="cercle"></div>
+        <div id="shadow"></div>
+        <div id="waves-box"></div>
+        <div id="waves"></div>
+    </div>
+    
+</body>
+</html>
